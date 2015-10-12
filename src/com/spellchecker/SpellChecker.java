@@ -27,7 +27,6 @@ import java.util.Hashtable;
 			
 			for(String a : array){
 				words = a.split(" ");
-				//System.out.println(Arrays.toString(words));
 				
 				for(String x : words){
 					wfile.writeFile(binsearch.search(dictArray, x));
@@ -42,8 +41,6 @@ import java.util.Hashtable;
 			private static final int ELEMENT_NOT_FOUND = -1;
 
 			private static String search(String[] array, String element, int first, int last) {
-				//System.out.println(first);
-				//System.out.println(last);
 				
 				
 				if (first > last) {
@@ -52,7 +49,6 @@ import java.util.Hashtable;
 
 				int mid = (first + last) / 2;
 				String midElement = array[mid];
-				//System.out.println("--- " +midElement);
 				int compare = midElement.compareToIgnoreCase(element);
 				
 				
@@ -90,10 +86,6 @@ import java.util.Hashtable;
 				pw.close();
 			}
 			
-//			public static void main(String[] args) throws IOException {
-//				WriteFile rite = new WriteFile("document-corrected.txt");
-//				rite.writeFile("thid id not eworking why?");
-//			}
 		}
 		public class readFile {
 			private String file_path;
